@@ -4,8 +4,8 @@ var canvas,
 	pressing = [],
 	KEY_UP=87,
 	KEY_DOWN=83,
-	KEY_RIGHT=68,
-	KEY_LEFT=65,
+	KEY_RIGHT=39,
+	KEY_LEFT=37,
 	ENTER=13,
 	player;
 
@@ -52,6 +52,7 @@ function run(){
 
 document.addEventListener('keydown',function(evt){ 
 	lastPress = evt.keyCode;
+	console.log(evt.keyCode)
 	pressing[evt.keyCode]=true;
 	console.log(pressing);
 });
