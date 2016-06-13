@@ -1,6 +1,6 @@
 function Alumno(nombre,notas){
-	this.nombre = nombre;
-	this.notas = notas
+	this.nombre = (typeof(nombre) == "string") ? nombre : "sinnombre";
+	this.notas = (notas instanceof Array) ? notas : [];
 
 	this.promedio = function(){
 		total = 0;
