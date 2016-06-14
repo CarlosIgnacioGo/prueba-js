@@ -2,8 +2,10 @@ $(document).ready(function(){
 	var num = 6;
 	$("div").on("click",function(){
 		var text = num; 
-		var color = $("#color").val();
-		$("ul").append( "<li>" + text + "</li>" );
+		$("ul").append( "<li> Elemento "+ text + "</li>" );
 		num++;
+		$("div li").click(function(e) {
+        e.stopPropagation();
+   });
 	})
 })
